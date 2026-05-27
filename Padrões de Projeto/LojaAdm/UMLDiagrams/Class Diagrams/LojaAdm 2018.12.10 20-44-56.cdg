@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="LojaAdm">
+  <ClassDiagramComponents>
+    <Class name="Cadastro" package="loja" visibility="public" xPosition="2477.0" yPosition="1780.0">
+      <Fields>
+        <Field name="isFirst" type="boolean" visibility="private"/>
+        <Field name="loja" type="LojaFacade" visibility="private"/>
+        <Field name="funcionario" type="Funcionario" visibility="private"/>
+        <Field name="tela" type="ObserverAlt" visibility="private"/>
+        <Field name="bt_cadastrar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_cancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cb_tipo" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbl_cadas" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_tipo" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="tf_email" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_login" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_nome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_senha" type="javax.swing.JPasswordField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="isFirst"/>
+          <Argument type="LojaFacade" name="loja"/>
+          <Argument type="boolean" name="isEdit"/>
+          <Argument type="Funcionario" name="funcionario"/>
+          <Argument type="ObserverAlt" name="tela"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="tf_senhaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tf_nomeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_cancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_cadastrarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Funcionario" package="loja" visibility="public" xPosition="936.0" yPosition="1893.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="login"/>
+          <Argument type="String" name="senha"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="nivelAcesso"/>
+          <Argument type="int" name="id_loja"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getId_loja" returnType="int" visibility="public"/>
+        <Method name="setId_loja" returnType="void" visibility="public">
+          <Argument type="int" name="id_loja"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getLogin" returnType="String" visibility="public"/>
+        <Method name="setLogin" returnType="void" visibility="public">
+          <Argument type="String" name="login"/>
+        </Method>
+        <Method name="getSenha" returnType="String" visibility="public"/>
+        <Method name="setSenha" returnType="void" visibility="public">
+          <Argument type="String" name="senha"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getNivelAcesso" returnType="String" visibility="public"/>
+        <Method name="setNivelAcesso" returnType="void" visibility="public">
+          <Argument type="String" name="nivelAcesso"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FuncionariosView" package="loja" visibility="public" xPosition="61.0" yPosition="1950.0">
+      <Fields>
+        <Field name="cargo" type="String" visibility="private"/>
+        <Field name="loja" type="LojaFacade" visibility="private"/>
+        <Field name="tela" type="ObserverAlt" visibility="private"/>
+        <Field name="bt_delete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_edit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tabl_func" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="cargo"/>
+          <Argument type="LojaFacade" name="loja"/>
+          <Argument type="ObserverAlt" name="tela"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_deleteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_editActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="updateList" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FuncionarioTableModel" package="loja" visibility="public" xPosition="1976.0" yPosition="1461.0">
+      <Fields>
+        <Field name="funcionarios" type="HashMap&lt;Integer, Funcionario&gt;" visibility="private"/>
+        <Field name="funcionariosArray" type="ArrayList&lt;Funcionario&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="HashMap&lt;Integer, Funcionario&gt;" name="funcionarios"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Login" package="loja" visibility="public" xPosition="1644.0" yPosition="1019.0">
+      <Fields>
+        <Field name="loja" type="LojaFacade" visibility="private"/>
+        <Field name="bt_entrar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="lbl_nomeLoja" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="ta_motd" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="tf_login" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_senha" type="javax.swing.JPasswordField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_entrarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="motd"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Loja" package="loja" visibility="public" xPosition="1656.0" yPosition="1616.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="motd"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getMotd" returnType="String" visibility="public"/>
+        <Method name="setMotd" returnType="void" visibility="public">
+          <Argument type="String" name="motd"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LojaFacade" package="loja" visibility="public" xPosition="2454.0" yPosition="657.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="funcionarios" type="HashMap&lt;Integer, Funcionario&gt;" visibility="private"/>
+        <Field name="produtos" type="ArrayList&lt;Produto&gt;" visibility="private"/>
+        <Field name="logado" type="boolean" visibility="private"/>
+        <Field name="lojaInfoMemento" type="LojaInfoMemento" visibility="private"/>
+        <Field name="db" type="SQLConnectSingleton" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId_logado" returnType="int" visibility="public"/>
+        <Method name="setId_logado" returnType="void" visibility="public">
+          <Argument type="int" name="id_logado"/>
+        </Method>
+        <Method name="setLojaInfoMemento" returnType="void" visibility="public">
+          <Argument type="LojaInfoMemento" name="lojaInfoMemento"/>
+        </Method>
+        <Method name="getLojaInfoMemento" returnType="LojaInfoMemento" visibility="public"/>
+        <Method name="getLojaInfoMementoState" returnType="LojaInfoMemento" visibility="public"/>
+        <Method name="getFuncionarios" returnType="HashMap&lt;Integer, Funcionario&gt;" visibility="public"/>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="getMotd" returnType="String" visibility="public"/>
+        <Method name="getProdutos" returnType="ArrayList&lt;Produto&gt;" visibility="public"/>
+        <Method name="createTables" returnType="void" visibility="public"/>
+        <Method name="addFuncionario" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="login"/>
+          <Argument type="String" name="senha"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="nivelAcesso"/>
+          <Argument type="int" name="id_loja"/>
+        </Method>
+        <Method name="addProduto" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="double" name="valor"/>
+          <Argument type="int" name="estoque"/>
+        </Method>
+        <Method name="novaLoja" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="motd"/>
+        </Method>
+        <Method name="novaVenda" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+          <Argument type="PagamentoCommand" name="pagamento"/>
+        </Method>
+        <Method name="putFuncionarios" returnType="void" visibility="public"/>
+        <Method name="putLoja" returnType="void" visibility="public"/>
+        <Method name="putProdutos" returnType="void" visibility="public"/>
+        <Method name="putVendas" returnType="ArrayList&lt;Venda&gt;" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="login" returnType="Funcionario" visibility="public">
+          <Argument type="String" name="login"/>
+          <Argument type="String" name="senha"/>
+        </Method>
+        <Method name="getProdutosToCombo" returnType="void" visibility="public">
+          <Argument type="JComboBox" name="produtosCombo"/>
+        </Method>
+        <Method name="editLoja" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="motd"/>
+        </Method>
+        <Method name="editProduto" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="double" name="valor"/>
+          <Argument type="int" name="estoque"/>
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="editFuncionario" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="login"/>
+          <Argument type="String" name="senha"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="nivelAcesso"/>
+          <Argument type="Funcionario" name="funcionario"/>
+        </Method>
+        <Method name="deleteProduto" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="deleteFuncionario" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="Funcionario" name="funcionario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LojaInfoMemento" package="loja" visibility="public" xPosition="1264.0" yPosition="1667.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="motd"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="getMotd" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MinhasVendas" package="loja" visibility="public" xPosition="2505.0" yPosition="27.0">
+      <Fields>
+        <Field name="loja" type="LojaFacade" visibility="package"/>
+        <Field name="vendas" type="ArrayList&lt;Venda&gt;" visibility="package"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="lbl_minhasVendas" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_totalVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="list_vendas" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="tabl_prod" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LojaFacade" name="loja"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="list_vendasValueChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ListSelectionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NovaLoja" package="loja" visibility="public" xPosition="964.0" yPosition="464.0">
+      <Fields>
+        <Field name="isEdit" type="boolean" visibility="private"/>
+        <Field name="loja" type="LojaFacade" visibility="private"/>
+        <Field name="tela" type="ObserverDadosLoja" visibility="private"/>
+        <Field name="bt_restaurar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_salvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbl_loja" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="tf_motd" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tf_motdA" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="tf_nome" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="isEdit"/>
+          <Argument type="LojaFacade" name="loja"/>
+          <Argument type="ObserverDadosLoja" name="tela"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_salvarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_restaurarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NovoProd" package="loja" visibility="public" xPosition="2467.0" yPosition="1346.0">
+      <Fields>
+        <Field name="loja" type="LojaFacade" visibility="private"/>
+        <Field name="isEdit" type="boolean" visibility="private"/>
+        <Field name="tela" type="ObserverAlt" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="bt_cadastrar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_cancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbl_novoProd" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="sn_estoque" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="tf_nome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="tf_valor" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="isEdit"/>
+          <Argument type="LojaFacade" name="loja"/>
+          <Argument type="ObserverAlt" name="tela"/>
+          <Argument type="Produto" name="produto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_cancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_cadastrarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PagamentoCredito" package="loja" visibility="public" xPosition="1644.0" yPosition="1927.0">
+      <Fields>
+        <Field name="bt_concluido" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbl_idVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_totalCompra" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_totalItens" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_concluidoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="compra" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PagamentoDebito" package="loja" visibility="public" xPosition="905.0" yPosition="1265.0">
+      <Fields>
+        <Field name="bt_concluido" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbl_idVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_totalCompra" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_totalItens" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_concluidoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="compra" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PagamentoDinheiro" package="loja" visibility="public" xPosition="81.0" yPosition="1534.0">
+      <Fields>
+        <Field name="bt_concluido" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbl_idVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_totalCompra" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_totalItens" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_concluidoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="compra" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PaginaInicial" package="loja" visibility="public" xPosition="34.0" yPosition="566.0">
+      <Fields>
+        <Field name="pessoaLogada" type="Funcionario" visibility="package"/>
+        <Field name="loja" type="LojaFacade" visibility="package"/>
+        <Field name="listaCompras" type="DefaultListModel" visibility="package"/>
+        <Field name="venda" type="Venda" visibility="package"/>
+        <Field name="bt_addProd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_cancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_comprar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_deslogar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_editLoja" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_func" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_minhasVendas" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_novoFunc" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_novoProd" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_prod" type="javax.swing.JButton" visibility="private"/>
+        <Field name="cb_pagamento" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="cb_produtos" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="lbl_adm" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_cargoPessoa" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_nomeLoja" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_nomePessoa" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbl_total" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="list_produtos" type="javax.swing.JList&lt;String&gt;" visibility="private"/>
+        <Field name="sidePanel" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="sn_quantidade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="topPanel" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Funcionario" name="pessoaLogada"/>
+          <Argument type="LojaFacade" name="loja"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_novoFuncActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_deslogarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_editLojaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_novoProdActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_addProdActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_comprarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_cancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_prodActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_funcActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_minhasVendasActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="motd"/>
+        </Method>
+        <Method name="updateList" returnType="void" visibility="public"/>
+        <Method name="clean" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="loja" visibility="public" xPosition="1788.0" yPosition="566.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="valor" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="id_loja"/>
+          <Argument type="int" name="estoque"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="double" name="valor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="getId_loja" returnType="int" visibility="public"/>
+        <Method name="getEstoque" returnType="int" visibility="public"/>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="getValor" returnType="double" visibility="public"/>
+        <Method name="setEstoque" returnType="void" visibility="public">
+          <Argument type="int" name="estoque"/>
+        </Method>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="setValor" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProdutosView" package="loja" visibility="public" xPosition="61.0" yPosition="165.0">
+      <Fields>
+        <Field name="cargo" type="String" visibility="private"/>
+        <Field name="loja" type="LojaFacade" visibility="private"/>
+        <Field name="tela" type="ObserverAlt" visibility="private"/>
+        <Field name="bt_delete" type="javax.swing.JButton" visibility="private"/>
+        <Field name="bt_edit" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tabl_produtos" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="cargo"/>
+          <Argument type="LojaFacade" name="loja"/>
+          <Argument type="ObserverAlt" name="tela"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="bt_editActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="bt_deleteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="updateList" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProdutoTableModel" package="loja" visibility="public" xPosition="1302.0" yPosition="886.0">
+      <Fields>
+        <Field name="produtos" type="ArrayList&lt;Produto&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Produto&gt;" name="produtos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProdutoVendaTableModel" package="loja" visibility="public" xPosition="1056.0" yPosition="101.0">
+      <Fields>
+        <Field name="produtos" type="ArrayList&lt;Produto&gt;" visibility="private"/>
+        <Field name="quant" type="ArrayList&lt;Integer&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Produto&gt;" name="produtos"/>
+          <Argument type="ArrayList&lt;Integer&gt;" name="quant"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SQLConnectSingleton" package="loja" visibility="public" xPosition="2879.0" yPosition="382.0">
+      <Fields>
+        <Field name="instance" type="SQLConnectSingleton" visibility="private" isStatic="true"/>
+        <Field name="connection" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="SQLConnectSingleton" visibility="public" isStatic="true"/>
+        <Method name="connect" returnType="boolean" visibility="public"/>
+        <Method name="disconnect" returnType="boolean" visibility="public"/>
+        <Method name="createStatement" returnType="Statement" visibility="public"/>
+        <Method name="createPrepareStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="getConnection" returnType="Connection" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Venda" package="loja" visibility="public" xPosition="2000.0" yPosition="155.0">
+      <Fields>
+        <Field name="id_func" type="int" visibility="private"/>
+        <Field name="pagamento" type="String" visibility="private"/>
+        <Field name="produtos" type="ArrayList&lt;Produto&gt;" visibility="private"/>
+        <Field name="quant" type="ArrayList&lt;Integer&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id_func"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId_venda" returnType="int" visibility="public"/>
+        <Method name="setId_venda" returnType="void" visibility="public">
+          <Argument type="int" name="id_venda"/>
+        </Method>
+        <Method name="setId_func" returnType="void" visibility="public">
+          <Argument type="int" name="id_func"/>
+        </Method>
+        <Method name="getId_func" returnType="int" visibility="public"/>
+        <Method name="getProdutos" returnType="ArrayList&lt;Produto&gt;" visibility="public"/>
+        <Method name="getQuant" returnType="ArrayList&lt;Integer&gt;" visibility="public"/>
+        <Method name="getPagamento" returnType="String" visibility="public"/>
+        <Method name="setPagamento" returnType="void" visibility="public">
+          <Argument type="String" name="pagamento"/>
+        </Method>
+        <Method name="getTotal" returnType="double" visibility="public"/>
+        <Method name="getTotalItens" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VendaListModel" package="loja" visibility="public" xPosition="1586.0" yPosition="81.0">
+      <Fields>
+        <Field name="vendas" type="ArrayList&lt;Venda&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Venda&gt;" name="vendas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSize" returnType="int" visibility="public"/>
+        <Method name="getElementAt" returnType="Object" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="ObserverAlt" package="loja" visibility="public" xPosition="1529.0" yPosition="335.0">
+      <Methods>
+        <Method name="updateList" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="ObserverDadosLoja" package="loja" visibility="public" xPosition="1226.0" yPosition="1112.0">
+      <Methods>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="motd"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PagamentoCommand" package="loja" visibility="public" xPosition="81.0" yPosition="27.0">
+      <Methods>
+        <Method name="compra" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="produto" source="loja.NovoProd" target="loja.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.PagamentoDebito" target="loja.PagamentoCommand"/>
+    <UseRelation source="loja.LojaFacade" target="loja.Funcionario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="loja.PagamentoDinheiro" target="loja.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tela" source="loja.ProdutosView" target="loja.ObserverAlt" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.ProdutosView" target="loja.ObserverAlt"/>
+    <HasRelation name="db" source="loja.LojaFacade" target="loja.SQLConnectSingleton" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.FuncionariosView" target="loja.ObserverAlt"/>
+    <HasRelation name="produtos" source="loja.ProdutoVendaTableModel" target="loja.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Produto&gt;"/>
+    <HasRelation name="tela" source="loja.NovaLoja" target="loja.ObserverDadosLoja" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendas" source="loja.VendaListModel" target="loja.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Venda&gt;"/>
+    <HasRelation name="funcionariosArray" source="loja.FuncionarioTableModel" target="loja.Funcionario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Funcionario&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.Login" target="loja.ObserverDadosLoja"/>
+    <HasRelation name="funcionarios" source="loja.LojaFacade" target="loja.Funcionario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, Funcionario&gt;"/>
+    <UseRelation source="loja.PagamentoCommand" target="loja.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tela" source="loja.Cadastro" target="loja.ObserverAlt" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendas" source="loja.MinhasVendas" target="loja.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Venda&gt;"/>
+    <UseRelation source="loja.PagamentoDebito" target="loja.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tela" source="loja.NovoProd" target="loja.ObserverAlt" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instance" source="loja.SQLConnectSingleton" target="loja.SQLConnectSingleton" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="loja.LojaFacade" target="loja.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.PagamentoDinheiro" target="loja.PagamentoCommand"/>
+    <UseRelation source="loja.SQLConnectSingleton" target="loja.SQLConnectSingleton" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pessoaLogada" source="loja.PaginaInicial" target="loja.Funcionario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="funcionarios" source="loja.FuncionarioTableModel" target="loja.Funcionario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Integer, Funcionario&gt;"/>
+    <HasRelation name="loja" source="loja.NovoProd" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lojaInfoMemento" source="loja.LojaFacade" target="loja.LojaInfoMemento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loja" source="loja.Login" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="venda" source="loja.PaginaInicial" target="loja.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loja" source="loja.FuncionariosView" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="loja.LojaFacade" target="loja.LojaInfoMemento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.PaginaInicial" target="loja.ObserverDadosLoja"/>
+    <UseRelation source="loja.PagamentoCredito" target="loja.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="loja.Venda" target="loja.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loja" source="loja.NovaLoja" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtos" source="loja.ProdutoTableModel" target="loja.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Produto&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.PaginaInicial" target="loja.ObserverAlt"/>
+    <UseRelation source="loja.LojaFacade" target="loja.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtos" source="loja.LojaFacade" target="loja.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Produto&gt;"/>
+    <HasRelation name="loja" source="loja.MinhasVendas" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtos" source="loja.Venda" target="loja.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Produto&gt;"/>
+    <HasRelation name="loja" source="loja.ProdutosView" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="funcionario" source="loja.Cadastro" target="loja.Funcionario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loja" source="loja.PaginaInicial" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tela" source="loja.FuncionariosView" target="loja.ObserverAlt" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loja" source="loja.Cadastro" target="loja.LojaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="loja.PagamentoCredito" target="loja.PagamentoCommand"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

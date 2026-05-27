@@ -1,0 +1,5 @@
+Nome: nomecompleto, Login: nom, Senha: 10, PIN: 4242
+Nome: nomecompleto, Login: nome, Senha: 1.
+-------------------------------
+Nome: nnn, Login: nnn, Senha: nnn.
+-------------------------------

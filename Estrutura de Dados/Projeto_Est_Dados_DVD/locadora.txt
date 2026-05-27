@@ -1,0 +1,30 @@
+Código do DVD: 4576
+Nome do filme: harry potter e a ordem da fênix
+Gênero: ficção
+Situação: disponível
+Valor do aluguel: R$2.5
+-------------------------------
+Código do DVD: 2365
+Nome do filme: fragmentado
+Gênero: suspense
+Situação: disponível
+Valor do aluguel: R$3.5
+-------------------------------
+Código do DVD: 3214
+Nome do filme: piratas do caribe a maldição do perola negra
+Gênero: ação/ficção
+Situação: disponível
+Valor do aluguel: R$3.0
+-------------------------------
+Código do DVD: 2512
+Nome do filme: star wars episódio ii
+Gênero: fantasia
+Situação: disponível
+Valor do aluguel: R$2.0
+-------------------------------
+Código do DVD: 5372
+Nome do filme: star wars episódio i
+Gênero: fantasia
+Situação: disponível
+Valor do aluguel: R$2.0
+-------------------------------
